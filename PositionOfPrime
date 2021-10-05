@@ -1,0 +1,30 @@
+public class PositionOfPrime
+{
+public static void main(String[] args) 
+{
+
+	  int n=10001;
+	  System.out.println((n));
+}
+	public void findPrime(int n) {
+		int j;
+		int i = 1;
+		int num = 0;
+		int prime = 2;
+		while (i <= n) {
+			for (j = 2; prime%j!=0; j++);
+
+			if (prime==j) {
+
+				i++;
+				num++;
+
+				if (num==n) 
+					System.out.println(prime);
+			}
+
+			prime++;
+		}
+
+	}
+
