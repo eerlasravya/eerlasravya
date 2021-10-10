@@ -1,0 +1,31 @@
+public class CollatzSequence {
+
+	public static void main(String[] args) {
+	final int number = 1000000;
+
+		long n = 0;
+		long res = 0;
+		long sequence;
+
+		for (int i = 2; i <= number; i++) {
+		    int length = 1;
+		    sequence = i;
+		    while (sequence != 1) {
+		        if ((sequence % 2) == 0) {
+		            sequence = sequence / 2;
+		        } else {
+		            sequence = sequence * 3 + 1;
+		        }
+		        length++;
+		    }
+
+		    if (length > n) {
+		        n = length;
+		        res= i;
+		    }
+		}
+		System.out.println(res);
+	}
+		
+}
+	
